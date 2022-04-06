@@ -1,0 +1,368 @@
+$color1: whitesmoke;
+$color2: black;
+$color3: #abcf27;
+$color4:rgb(76, 67, 120);
+$mainFont: 'val.otf';
+$secFont: 'Open Sans', sans-serif;
+
+*{
+    margin: 0%;
+    padding: 0%;
+    text-decoration: none;
+    list-style: none;
+}
+
+body{
+    background-color: whitesmoke;
+    font-family: 'Open Sans', sans-serif;
+}
+
+img:hover{
+    filter: invert(100);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+
+@font-face{
+    font-family: 'val.otf';
+    src: url('val.otf') format('trutype');
+}
+
+@mixin par ($parColor){
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13px;
+    margin-top: 2%;
+    color: $parColor;
+}
+
+@mixin contactTitles {
+    font-size: 1.3rem;
+    color: $color3;
+}
+
+@mixin icons {
+    color: $color1;
+    font-size: 14px;
+    font-weight: 200;
+}
+
+@mixin artes {
+    height: 200px;
+    margin-bottom: 1%;
+    margin-right: 0.5%;
+    margin-left: 0.5%;
+    border-radius: 5px;
+
+}
+
+@mixin btn($bgColor){
+    background-color: $bgColor;
+    color: $color1;
+    font-weight: 700;
+    padding: 7px 15px;
+    border-radius: 8px;
+
+    margin: 3% 0.5%;
+
+}
+
+//grid
+
+.container{
+    display: grid;
+    grid-gap: 0.5%;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:    "aboutUs    aboutClients"
+                            "aboutUs    imgForm";    
+
+    .aboutUs{
+        grid-row-start: aboutUs;
+        grid-row-end: aboutUs;
+    }
+
+    .aboutClients{
+        grid-row-start: aboutClients;
+        grid-row-end: aboutClients;
+    }
+
+    .imgForm{
+        grid-row-start: imgForm;
+        grid-row-end: imgForm;
+    }
+
+}
+
+//feed
+
+.aboutUs{
+    margin-inline: 8%;
+
+    .allIcons{
+        display: flex;
+        flex-direction: row;
+        margin-top: 2rem;
+        justify-content: center;
+    }
+
+    .contactInfo{
+
+        background-color: rgb(76, 67, 120);
+        padding: 2rem 3rem;
+        border-top-left-radius: 15px;
+        border-bottom-left-radius: 15px;
+        margin-right: 0.5rem;
+
+        h1{
+            @include contactTitles;
+        }
+
+        nav ul li{
+
+            a{
+                @include icons;
+
+                &:hover{
+                    color: $color3;
+                }
+
+                i{
+                    margin-right:1%;
+                    margin-bottom: 2%;
+                    font-size: 15px;
+                }
+
+
+            }
+        }
+    }
+
+    .socialMedia{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        background-color: rgb(76, 67, 120);
+        padding: 2rem 3rem;
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+
+        h1{
+            @include contactTitles;
+            margin-bottom: 0.5rem;
+        }
+
+        nav ul{
+
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+
+            li{
+                margin-inline: 5%;
+                a{
+                    @include icons;
+
+                    &:hover{
+                        color: $color3;
+                    }
+    
+    
+                    i{
+                        margin-bottom: 2%;
+                        font-size: 2rem;
+                    }
+                }
+            }
+            
+        }
+    }
+
+    .aboutUsInfo{
+        margin-top: 5rem;
+
+        h1{
+            @include contactTitles;
+        }
+
+        p{
+            @include par ($color2) ;
+        }
+    }
+}
+
+.mainSection{
+
+    .mainTitle{
+        /*background: linear-gradient(90deg, #abcf27, #feaeca);
+        text-transform: uppercase;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;*/
+    
+        font-family: VAL;
+        color: $color3;
+        font-size: 3.5rem;
+        text-align: center;
+    
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .izPar{
+        p{
+            @include par($color2);
+        }
+    }
+
+    .btnContainer{
+        text-align: center;
+
+        .btnGallery{
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 150px;
+            border-style: none;
+
+            background-color: $color3;
+            padding: 15px 10px;
+            border-radius: 5px;
+            margin-top: 2.5rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            overflow: hidden;
+
+            transition: .3s ease all;
+
+            &::after{
+                content: "";
+                width: 100%;
+                height: 100%;
+                background-color: blue;
+                position: absolute;
+                z-index: 1;
+
+                top: -46px;
+                left: 0;
+                transition: .3s ease-in-out all;
+            }
+
+            &:hover{
+                box-shadow: 0px 0px 10px blue;
+            }
+
+            &:hover::after{
+                top: 0;
+            }
+
+            a{
+                color: $color1;
+                font-weight: 700;
+                position: relative;
+                z-index: 2;
+                transition: .3s ease all;
+            }
+        }
+    }
+}
+
+.rightInfo{
+    background-color: $color2;
+
+    aside{
+        margin-bottom: 5%;
+
+        .clientsTitle{
+            @include contactTitles();
+            text-align: center;
+            margin-top: 3%;
+        }
+
+        .clientPar{
+            @include par(whitesmoke);
+
+            margin-left: 8%;
+            margin-right: 8%;
+            text-align: center;
+        }
+        
+    }
+
+    .imgForm{
+
+        .imgs{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            img{
+                @include artes;
+
+                &:hover{
+                    box-shadow: 0px 0px 10px $color3;
+                }
+            }
+        }
+
+        form{
+            
+            input{
+                padding: 10px 10px;
+                margin: 1% 1.2%;
+            }
+
+            .allInputs{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-top: 5%;
+
+                .nameMail{
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: nowrap;
+                    justify-content: center;
+                }
+            }
+
+            .btnS{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+
+                #sbtn{
+                    @include btn($color3);
+
+                    &:hover{
+                        background-color: $color4;
+                        box-shadow: 0px 0px 10px gray;
+                    }
+                }
+
+                #rbtn{
+                    @include btn(red);
+
+                    &:hover{
+                        background-color: $color4;
+                        box-shadow: 0px 0px 10px gray;
+                    }
+                    
+                }
+            }
+
+            
+
+            
+        }
+
+
+    }
+}
+
+//
+
+
+
+
+

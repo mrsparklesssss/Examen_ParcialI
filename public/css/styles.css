@@ -1,0 +1,379 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap");
+* {
+  margin: 0%;
+  padding: 0%;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  background-color: whitesmoke;
+  font-family: 'Open Sans', sans-serif;
+}
+
+img:hover {
+  -webkit-filter: invert(100);
+          filter: invert(100);
+}
+
+@font-face {
+  font-family: 'val.otf';
+  src: url("val.otf") format("trutype");
+}
+
+.container {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 0.5%;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas: "aboutUs    aboutClients" "aboutUs    imgForm";
+}
+
+.container .aboutUs {
+  -ms-grid-row: aboutUs;
+      grid-row-start: aboutUs;
+  grid-row-end: aboutUs;
+}
+
+.container .aboutClients {
+  -ms-grid-row: aboutClients;
+      grid-row-start: aboutClients;
+  grid-row-end: aboutClients;
+}
+
+.container .imgForm {
+  -ms-grid-row: imgForm;
+      grid-row-start: imgForm;
+  grid-row-end: imgForm;
+}
+
+.aboutUs {
+  margin-inline: 8%;
+}
+
+.aboutUs .allIcons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-top: 2rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.aboutUs .contactInfo {
+  background-color: #4c4378;
+  padding: 2rem 3rem;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  margin-right: 0.5rem;
+}
+
+.aboutUs .contactInfo h1 {
+  font-size: 1.3rem;
+  color: #abcf27;
+}
+
+.aboutUs .contactInfo nav ul li a {
+  color: whitesmoke;
+  font-size: 14px;
+  font-weight: 200;
+}
+
+.aboutUs .contactInfo nav ul li a:hover {
+  color: #abcf27;
+}
+
+.aboutUs .contactInfo nav ul li a i {
+  margin-right: 1%;
+  margin-bottom: 2%;
+  font-size: 15px;
+}
+
+.aboutUs .socialMedia {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #4c4378;
+  padding: 2rem 3rem;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.aboutUs .socialMedia h1 {
+  font-size: 1.3rem;
+  color: #abcf27;
+  margin-bottom: 0.5rem;
+}
+
+.aboutUs .socialMedia nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.aboutUs .socialMedia nav ul li {
+  margin-inline: 5%;
+}
+
+.aboutUs .socialMedia nav ul li a {
+  color: whitesmoke;
+  font-size: 14px;
+  font-weight: 200;
+}
+
+.aboutUs .socialMedia nav ul li a:hover {
+  color: #abcf27;
+}
+
+.aboutUs .socialMedia nav ul li a i {
+  margin-bottom: 2%;
+  font-size: 2rem;
+}
+
+.aboutUs .aboutUsInfo {
+  margin-top: 5rem;
+}
+
+.aboutUs .aboutUsInfo h1 {
+  font-size: 1.3rem;
+  color: #abcf27;
+}
+
+.aboutUs .aboutUsInfo p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 13px;
+  margin-top: 2%;
+  color: black;
+}
+
+.mainSection .mainTitle {
+  /*background: linear-gradient(90deg, #abcf27, #feaeca);
+        text-transform: uppercase;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;*/
+  font-family: VAL;
+  color: #abcf27;
+  font-size: 3.5rem;
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.mainSection .izPar p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 13px;
+  margin-top: 2%;
+  color: black;
+}
+
+.mainSection .btnContainer {
+  text-align: center;
+}
+
+.mainSection .btnContainer .btnGallery {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 150px;
+  border-style: none;
+  background-color: #abcf27;
+  padding: 15px 10px;
+  border-radius: 5px;
+  margin-top: 2.5rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+  overflow: hidden;
+  -webkit-transition: .3s ease all;
+  transition: .3s ease all;
+}
+
+.mainSection .btnContainer .btnGallery::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: blue;
+  position: absolute;
+  z-index: 1;
+  top: -46px;
+  left: 0;
+  -webkit-transition: .3s ease-in-out all;
+  transition: .3s ease-in-out all;
+}
+
+.mainSection .btnContainer .btnGallery:hover {
+  -webkit-box-shadow: 0px 0px 10px blue;
+          box-shadow: 0px 0px 10px blue;
+}
+
+.mainSection .btnContainer .btnGallery:hover::after {
+  top: 0;
+}
+
+.mainSection .btnContainer .btnGallery a {
+  color: whitesmoke;
+  font-weight: 700;
+  position: relative;
+  z-index: 2;
+  -webkit-transition: .3s ease all;
+  transition: .3s ease all;
+}
+
+.rightInfo {
+  background-color: black;
+}
+
+.rightInfo aside {
+  margin-bottom: 5%;
+}
+
+.rightInfo aside .clientsTitle {
+  font-size: 1.3rem;
+  color: #abcf27;
+  text-align: center;
+  margin-top: 3%;
+}
+
+.rightInfo aside .clientPar {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 13px;
+  margin-top: 2%;
+  color: whitesmoke;
+  margin-left: 8%;
+  margin-right: 8%;
+  text-align: center;
+}
+
+.rightInfo .imgForm .imgs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.rightInfo .imgForm .imgs img {
+  height: 200px;
+  margin-bottom: 1%;
+  margin-right: 0.5%;
+  margin-left: 0.5%;
+  border-radius: 5px;
+}
+
+.rightInfo .imgForm .imgs img:hover {
+  -webkit-box-shadow: 0px 0px 10px #abcf27;
+          box-shadow: 0px 0px 10px #abcf27;
+}
+
+.rightInfo .imgForm form input {
+  padding: 10px 10px;
+  margin: 1% 1.2%;
+}
+
+.rightInfo .imgForm form .allInputs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 5%;
+}
+
+.rightInfo .imgForm form .allInputs .nameMail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.rightInfo .imgForm form .btnS {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.rightInfo .imgForm form .btnS #sbtn {
+  background-color: #abcf27;
+  color: whitesmoke;
+  font-weight: 700;
+  padding: 7px 15px;
+  border-radius: 8px;
+  margin: 3% 0.5%;
+}
+
+.rightInfo .imgForm form .btnS #sbtn:hover {
+  background-color: #4c4378;
+  -webkit-box-shadow: 0px 0px 10px gray;
+          box-shadow: 0px 0px 10px gray;
+}
+
+.rightInfo .imgForm form .btnS #rbtn {
+  background-color: red;
+  color: whitesmoke;
+  font-weight: 700;
+  padding: 7px 15px;
+  border-radius: 8px;
+  margin: 3% 0.5%;
+}
+
+.rightInfo .imgForm form .btnS #rbtn:hover {
+  background-color: #4c4378;
+  -webkit-box-shadow: 0px 0px 10px gray;
+          box-shadow: 0px 0px 10px gray;
+}
+/*# sourceMappingURL=styles.css.map */
